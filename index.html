@@ -9,27 +9,28 @@
     <h1>Student Profile</h1>
 
     <form>
-
-        <h3>Personal Information:</h3>
+        <fieldset>
+        <legend>Personal Information: </legend>
         <label for="name">Your Name:</label>
         <input id="name" type="text">
         <br><br>
-
+        
         <label for="birthday">Birthday:</label>
         <input type="date" id="birthday">
         <br><br>
 
         <label for="phone-number">Phone Number:</label>
-        <input type="text" id="phone-number" name="Phone">
+        <input type="text" id="phone-number" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         <br><br>
 
          <label for="state-code">State Code:</label>
-        <input type="text" id="state-code" name="State">
+        <input type="text" id="state-code" name="State" pattern="[A-Za-z]{3}">
         <br><br>
-        
+        </fieldset>
 
         <!-- Grade Level -->
-        <h3>Grade Level:</h3>
+        <fieldset>
+        <legend>Grade Level:</legend>
         <input type="radio" id="freshman" name="grade" value="Freshman">
         <label for="freshman">Freshman</label>
       <br>
@@ -45,9 +46,11 @@
         <input type="radio" id="senior" name="grade" value="Senior">
         <label for="senior">Senior</label>
       <br><br>
+      </fieldset>
 
         <!-- Interests -->
-        <h3>Interests:</h3>
+      <fieldset>
+        <legend>Interests:</legend>
         <input type="checkbox" id="sports" value="Sports">
         <label for="sports">Sports</label>
       <br>
@@ -59,7 +62,7 @@
         <input type="checkbox" id="coding" value="Coding">
         <label for="coding">Coding</label>
       <br><br>
-
+      </fieldset>
 
         <button type="button" onclick="showProfile()">Submit</button>
     </form>
